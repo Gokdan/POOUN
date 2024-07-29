@@ -2,7 +2,7 @@ from tkinter import *
 
 class Main:
     @staticmethod
-    def salario():
+    def salario(): #Metodo que captura y arroja segun el caso 
         nombre = entrada_nombre.get()
         valor_hora = float(entrada_valorHora.get())
         horas_mes = int(entrada_horasMes.get())
@@ -12,11 +12,11 @@ class Main:
         else: 
             label_resultado.config(text= f'Nombre: {nombre}')
 
-
+#Ventana principal
 root = Tk()
 root.title('Informacion trabajador')
 root.geometry('200x250')
-
+#widgets
 label_nombre = Label(root, text='Nombre: ')
 label_nombre.pack()
 entrada_nombre = Entry(root)

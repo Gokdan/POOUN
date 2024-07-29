@@ -2,12 +2,12 @@ from tkinter import *
 import math
 
 class ecuacion_cuadratica:
-    def __init__(self,a,b,c):
+    def __init__(self,a,b,c): #Metodo constructor
         self.a = a
         self.b = b
         self.c = c
         
-    def calculo(self):    
+    def calculo(self):    #Metodo para el calculo de la escucacion cuadratica
         discriminante = pow(self.b,2) - 4 * self.a * self.c
         if discriminante < 0:
             return None
@@ -16,7 +16,7 @@ class ecuacion_cuadratica:
             x_2 = (-self.b - math.sqrt(discriminante)) / (2 * self.a)
             return x_1, x_2
 
-    def soluciones(self):
+    def soluciones(self): #Metodo que determina las soluciones o no solucion
         soluciones = self.calculo()
         if soluciones is None:
             resultado.config(text= 'No existen soluciones reales.')
@@ -27,7 +27,7 @@ class ecuacion_cuadratica:
 
 class Main:
     @staticmethod
-    def salida():
+    def salida(): #Metodo que captura los valores y crea una instancia de ecuacion cuadratica 
     
         a = float(entry_a.get())
         b = float(entry_b.get())

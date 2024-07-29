@@ -1,5 +1,5 @@
 import tkinter as tk
-
+# Clase empleado
 class Empleado:
     def __init__(self, codigo, nombres, horas_trabajadas, valor_hora, retencion):
         self.codigo = codigo
@@ -16,6 +16,7 @@ class Empleado:
         retencion_fosf = salario_bruto * (self.retencion / 100)
         return salario_bruto - retencion_fosf
 
+# Metodo que es llamado en el Button para capturar los valores y crear la instancia
 def calcular_salarios():
     codigo = entry_codigo.get()
     nombres = entry_nombres.get()

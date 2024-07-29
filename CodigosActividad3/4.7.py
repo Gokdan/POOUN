@@ -2,7 +2,7 @@ import tkinter as tk
 
 class Main:
     @staticmethod
-    def desigualdad():
+    def desigualdad(): #Médoto que captura los Valores A y B y arroja Si A es mayor, menor o igual a B.
         A = int(entrada_A.get())
         B = int(entrada_B.get())
         
@@ -12,10 +12,10 @@ class Main:
             resultado.config(text=f'A ({A}) es igual a B ({B})')
         else:
             resultado.config(text=f'A ({A}) es mayor que B ({B})')
-
+#Ventana principal
 ventana = tk.Tk()
 ventana.title('Desigualdad')
-
+#Widgets
 label_A = tk.Label(ventana,text= 'Ingrese el numero A: ')
 label_A.pack()
 entrada_A = tk.Entry(ventana)

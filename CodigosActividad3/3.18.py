@@ -16,20 +16,21 @@ class Empleado:
         retencion_fosf = salario_bruto * (self.retencion / 100)
         return salario_bruto - retencion_fosf
 
+class Main:
 # Metodo que es llamado en el Button para capturar los valores y crear la instancia
-def calcular_salarios():
-    codigo = entry_codigo.get()
-    nombres = entry_nombres.get()
-    horas_trabajadas = float(entry_horas.get())
-    valor_hora = float(entry_valor.get())
-    retencion = float(entry_retencion.get())
-    
-    empleado = Empleado(codigo, nombres, horas_trabajadas, valor_hora, retencion)
-    
-    salario_bruto = empleado.calcular_salario_bruto()
-    salario_neto = empleado.calcular_salario_neto()
-    
-    resultado.config(text=f"Código: {codigo}\nNombre: {nombres}\nSalario Bruto: {salario_bruto}\n Salario Neto: {salario_neto}")
+    def calcular_salarios():
+        codigo = entry_codigo.get()
+        nombres = entry_nombres.get()
+        horas_trabajadas = float(entry_horas.get())
+        valor_hora = float(entry_valor.get())
+        retencion = float(entry_retencion.get())
+        
+        empleado = Empleado(codigo, nombres, horas_trabajadas, valor_hora, retencion)
+        
+        salario_bruto = empleado.calcular_salario_bruto()
+        salario_neto = empleado.calcular_salario_neto()
+        
+        resultado.config(text=f"Código: {codigo}\nNombre: {nombres}\nSalario Bruto: {salario_bruto}\n Salario Neto: {salario_neto}")
 
 # Crear la ventana principal
 root = tk.Tk()
@@ -61,7 +62,7 @@ label_retencion.grid(row=4, column=0)
 entry_retencion = tk.Entry(root)
 entry_retencion.grid(row=4, column=1)
 
-boton_calcular = tk.Button(root, text="Calcular Salario", command=calcular_salarios)
+boton_calcular = tk.Button(root, text="Calcular Salario", command=Main.calcular_salarios)
 boton_calcular.grid(row=5, columnspan=2)
 
 resultado = tk.Label(root, text="")

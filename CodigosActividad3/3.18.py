@@ -28,7 +28,7 @@ def calcular_salarios():
     salario_bruto = empleado.calcular_salario_bruto()
     salario_neto = empleado.calcular_salario_neto()
     
-    resultado.config(text=f"Salario Bruto: {salario_bruto}, Salario Neto: {salario_neto}")
+    resultado.config(text=f"Código: {codigo}\nNombre: {nombres}\nSalario Bruto: {salario_bruto}\n Salario Neto: {salario_neto}")
 
 # Crear la ventana principal
 root = tk.Tk()

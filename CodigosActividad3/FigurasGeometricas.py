@@ -3,7 +3,7 @@ import math
 pi = math.pi
 
 class circulo:
-    def __init__(self,radio):
+    def __init__(self,radio):   #Metodo constructor
         self.radio = radio
     def area_circulo(self):                 #Metodo para el area del circulo
         return  (pi * pow(self.radio,2))
@@ -12,7 +12,7 @@ class circulo:
         return 2 * pi * self.radio
     
 class rectangulo:
-    def __init__(self,base,altura):
+    def __init__(self,base,altura): #Metodo constructor
         self.base = base
         self.altura = altura
 
@@ -23,17 +23,17 @@ class rectangulo:
         return (2 * self.base) + (2 * self.altura)
     
 class cuadrado:
-    def __init__(self,lado):
+    def __init__(self,lado):    #Metodo constructor
         self.lado = lado
     
     def area_cuadrado(self):                #Metodo para el area del cuadrado
-        return  self.lado * self.lado
+        return  pow(self.lado,2)
     
     def perimetro_cuadrado(self):           #Metodo para el perimetro del cuadrado
         return self.lado * 4
 
 class triangulo_rectangulo:                 
-    def __init__(self,base,altura):
+    def __init__(self,base,altura): #Metodo constructor
         self.base = base
         self.altura = altura
     
@@ -86,7 +86,7 @@ class Main:         #Clase Main y metodo main para crear instancias de las figur
 root = Tk()
 root.title('Figuras geométricas')
 root.geometry('350x450')
-
+#Widgets
 label_radioCirculo = Label(root, text= 'Ingrese el radio del circulo: ')
 label_radioCirculo.grid(row= 0, column= 0)
 entrada_radioCirculo = Entry(root)
